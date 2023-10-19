@@ -1,0 +1,174 @@
+#include <math.h>
+#include <stdio.h>
+
+void function1()
+{
+    int x;
+    do
+    {
+        printf("print a number \n");
+        scanf("%d",&x);
+    }while(x<0);    
+    if((x%2==0))
+         {
+             printf("the number is being defined by 2 and the number is %d",x);
+         }
+        else
+          if((x%2==1))
+          {
+             printf("the number is not defined by 2 and the number is %d" ,x);
+          }
+        
+}
+void function2()
+{
+  int x =0;
+  int score;
+  int avgScore=0;    
+    while(x<=8)
+    {
+    scanf("%d",&score);
+    avgScore = avgScore + score;
+    x++;
+    }
+    avgScore = avgScore / 8;
+    printf("the score is %d",avgScore);
+}
+int function3()
+{
+      
+    int num1,ehidot,asharot,meot,alaphim,ashrotAlafim;
+    do
+    {        printf("print a number \n");
+        scanf("%d",&num1);
+    }while((num1>=99999)||(num1<=10000));
+    ehidot = num1 % 10;    
+    ashrotAlafim = (num1 / 1000)/10;
+    alaphim = (num1 /1000)%10;
+    asharot = (num1 / 10)%10;
+    meot = num1 /100;
+    meot = meot % 10;
+    if((ehidot==ashrotAlafim)&&(asharot==alaphim))
+    {
+    num1 = ehidot*10000+ asharot*1000 + meot*100 +alaphim *10 + ashrotAlafim;
+    printf("the number %d is polindrom ",num1);
+    }
+    else
+        {
+        printf("the number %d is not polindrom" ,num1);
+        }
+   
+}
+ void function4(int x, int y, int z)
+{
+    if((x>y)&&(x>z)&&(y<z))
+    {
+     printf("the number x = %d and it's the biggest" ,x);   
+    printf("the number y= %d and it's the smallest" , y);
+    }
+     if((x<y)&&(x<z)&&(y>z))
+    {
+     printf("the number y= %d and it's the biggest" ,y);   
+    printf("the number x= %d and it's the smallest" , x);
+    }
+     if((x<y)&&(x<z)&&(y<z))
+    {
+     printf("the number z= %d and it's the biggest" ,z);   
+    printf("the number x= %d and it's the smallest" , x);
+    }
+    if((x>y)&&(x<z)&&(y<z))
+    {
+     printf("the number z= %d and it's the biggest" ,z);   
+    printf("the number y= %d and it's the smallest" , y);
+    }
+     if((x<y)&&(x>z)&&(y>z))
+    {
+     printf("the number y= %d and it's the biggest" ,y);   
+    printf("the number z= %d and it's the smallest" , z);
+    }
+     if((x>y)&&(x>z)&&(y>z))
+    {
+     printf("the number x= %d and it's the biggest" ,x);   
+    printf("the number z= %d and it's the smallest" , z);
+    }
+}
+void function5(int x,int y)
+{
+int i = 0;
+int duple =0;
+while(y>i)    
+{
+ duple = duple + x;
+ i++;
+}
+printf("the final number is %d", duple);    
+  
+}
+void function6(int x)
+{
+int num =1;
+int num2 =1;
+int ans=0;
+while(num<=x)
+{
+    if((num==x)||(num2==x))
+    {
+        ans=1;
+        break;
+    }
+    num = num + num2;
+    num2 = num + num2;
+}
+    if(ans==1)
+    
+        printf("the number is phibonachi");
+        
+    else
+        printf("the number is not phibonachi");
+    
+}
+void function7(int x)
+{
+    int num = 1;
+    int sum =1;
+while(num<=x)
+{
+    if(num<=x)
+    {
+        sum = sum * num;
+        num++;
+    }
+}
+    printf("the sum is %d" ,sum);
+
+}
+void function8(int x,int y)
+{
+    int i=x;
+   int sum=0;
+if(x<y)
+
+    while(i<=y)
+    {
+      sum = sum + x;
+      x++;
+      i++;
+    }
+
+
+printf("the total number is %d" ,sum);
+
+
+
+
+}
+int main()
+{
+    int x,y,z;
+    printf("print the first number\n");
+    scanf("%d",&x);
+    printf("print the first number\n");
+    scanf("%d",&y);
+    function8(x,y);
+
+}
